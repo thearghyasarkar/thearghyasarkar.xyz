@@ -1,14 +1,6 @@
-import { Fira_Mono, Antonio, Poppins, Advent_Pro, Orbitron } from 'next/font/google'
 import "@/styles/globals.css";
 // Font files can be colocated inside of `pages`
-export const fira_mono = Fira_Mono({
-  weight: '400',
-  subsets: ['latin'],
-})
-export const airbeat = Orbitron({
-  weight: '800',
-  subsets: ['latin'],
-})
+
 
 export const metadata = {
   title: '[/dev/arghya-sarkar/]',

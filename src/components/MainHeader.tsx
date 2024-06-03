@@ -1,8 +1,13 @@
 import React from "react";
 import "@/styles/home.module.css";
-import { airbeat } from "@/app/layout";
+import { Orbitron } from 'next/font/google'
 import { CiHome, CiUser,  CiGrid32, CiPen, CiPhone  } from "react-icons/ci";
 import { RiHome5Fill } from "react-icons/ri";
+
+const airbeat = Orbitron({
+  weight: '800',
+  subsets: ['latin'],
+}) 
 
 const MainHeader = () => {
   return (

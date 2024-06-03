@@ -1,7 +1,14 @@
+import { Fira_Mono, Orbitron } from 'next/font/google'
 import MainHeader from "@/components/MainHeader";
-import { airbeat, fira_mono } from "./layout";
 import { RiGithubLine, RiLinkedinFill, RiAtLine, RiDiscordLine } from "react-icons/ri";
-
+const fira_mono = Fira_Mono({
+  weight: '400',
+  subsets: ['latin'],
+})
+const airbeat = Orbitron({
+  weight: '800',
+  subsets: ['latin'],
+}) 
 export default function Page() {
   return (
     <>
