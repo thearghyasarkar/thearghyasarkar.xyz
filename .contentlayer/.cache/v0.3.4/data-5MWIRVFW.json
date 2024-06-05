@@ -1,0 +1,35 @@
+{
+  "cacheItemsMap": {
+    "00-sample-blog/index.mdx": {
+      "document": {
+        "title": "My first blog",
+        "publishedAt": "2024-06-05T00:00:00.000Z",
+        "updatedAt": "2024-06-05T00:00:00.000Z",
+        "description": "lorem ipsum colores markdown",
+        "isPublished": true,
+        "author": "Arghya Sarkar",
+        "categories": [
+          "science",
+          "technology"
+        ],
+        "body": {
+          "raw": "\n\nThis precisely is my first blog where I will use all types of markdown formattingfor testing purposes\n\n# This is a heading 1\n## This is a heading 2\n### This is a heading 3\n#### This is a heading 4\n\nlinks in markdown\n[This is a link to google](https://www.google.com)\n\nThis is a list\n- item 1\n- item 2\n- item 3\n\nThis is a numbered list\n\n1. item 1\n2. item 2\n3. item 3\n\nThis is a blockquote\n\n> This is a blockquote\n\nThis is a code block\n\n```python\ndef hello():\n    print(\"Hello World\")\n```\n\nThis is a table\n\n| Name | Age |\n|------|-----|\n| John | 25  |\n| Doe  | 30  |\n\nThis is a horizontal rule\n\n---\n\nThis is an image\n\n![This is an image](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)\n",
+          "html": "<p>This precisely is my first blog where I will use all types of markdown formattingfor testing purposes</p>\n<h1>This is a heading 1</h1>\n<h2>This is a heading 2</h2>\n<h3>This is a heading 3</h3>\n<h4>This is a heading 4</h4>\n<p>links in markdown\n<a href=\"https://www.google.com\">This is a link to google</a></p>\n<p>This is a list</p>\n<ul>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ul>\n<p>This is a numbered list</p>\n<ol>\n<li>item 1</li>\n<li>item 2</li>\n<li>item 3</li>\n</ol>\n<p>This is a blockquote</p>\n<blockquote>\n<p>This is a blockquote</p>\n</blockquote>\n<p>This is a code block</p>\n<pre><code class=\"language-python\">def hello():\n    print(\"Hello World\")\n</code></pre>\n<p>This is a table</p>\n<p>| Name | Age |\n|------|-----|\n| John | 25  |\n| Doe  | 30  |</p>\n<p>This is a horizontal rule</p>\n<hr>\n<p>This is an image</p>\n<p><img src=\"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png\" alt=\"This is an image\"></p>"
+        },
+        "_id": "00-sample-blog/index.mdx",
+        "_raw": {
+          "sourceFilePath": "00-sample-blog/index.mdx",
+          "sourceFileName": "index.mdx",
+          "sourceFileDir": "00-sample-blog",
+          "contentType": "mdx",
+          "flattenedPath": "00-sample-blog"
+        },
+        "type": "Blog",
+        "url_path": "/writing/00-sample-blog/index.mdx"
+      },
+      "documentHash": "1717593581270",
+      "hasWarnings": false,
+      "documentTypeName": "Blog"
+    }
+  }
+}

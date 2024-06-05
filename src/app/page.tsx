@@ -1,6 +1,7 @@
 import { Fira_Mono, Orbitron } from 'next/font/google'
 import MainHeader from "@/components/MainHeader";
 import { RiGithubLine, RiLinkedinFill, RiAtLine, RiDiscordLine } from "react-icons/ri";
+import "@/styles/home.css"
 const fira_mono = Fira_Mono({
   weight: '400',
   subsets: ['latin'],
@@ -12,9 +13,10 @@ const airbeat = Orbitron({
 export default function Page() {
   return (
     <>
+    <div className="background"></div>
     <MainHeader/>
 
-    <div className="HeroSection mt-[30vh] md:mt-[40vh] lg:mt-[10vh] items-center justify-center text-center">
+    <div className="HeroSection mt-[20vh] md:mt-[40vh] lg:mt-[10vh] items-center justify-center text-center">
       <h1 className={`${airbeat.className} drop-shadow-xl-white px-6 text-left md:text-center text-[4em] leading-1 lg:text-[7.5rem] mt-24 text-blue-white`}>
         ARGHYA SARKAR
       </h1>
