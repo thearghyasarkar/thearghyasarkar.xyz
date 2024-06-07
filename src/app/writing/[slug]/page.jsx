@@ -6,8 +6,9 @@ import { render } from "react-dom"
 
 
 export default function BlogPage({ params }){
-    console.log(allBlogs)
     const post = allBlogs.find((post) => post._raw.flattenedPath === params.slug)
+    // console.log(post.categories[0]) 
+
     
     return (
         <div>

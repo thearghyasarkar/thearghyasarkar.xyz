@@ -17,7 +17,7 @@ export default function AboutPage() {
         <MainHeader/>
 
         <div className="md:w-[60vw] mx-auto aboutme-container">
-
+          
         </div>
         </div>
     );

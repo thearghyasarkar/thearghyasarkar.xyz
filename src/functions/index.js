@@ -7,3 +7,4 @@ export const sortBlogs = (blogs) => {
 export const formatDate = (date) => {
     return format(parseISO(date), 'MMMM dd, yyyy');
     }
+

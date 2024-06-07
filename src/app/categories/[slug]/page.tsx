@@ -1,5 +1,5 @@
-import { allBlogs } from "../../../.contentlayer/generated/index.mjs";
-import { sortBlogs, formatDate } from "@/functions";
+import { allBlogs } from "../../../../.contentlayer/generated/index.mjs";
+import { formatDate } from "@/functions";
 import MainHeader from "@/components/MainHeader";
 import {Categories} from "@/components/Categories"
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -14,37 +14,28 @@ const fira_code = Fira_Code({
   subsets: ["latin"],
 });
 
-let latestPosts = sortBlogs(allBlogs);
 
-export const handleCategory = (category: string) => {
-    let filteredBlogs: any = []
-    allBlogs.map((blog:any) => {
-        if(blog.categories.includes(category)){
-            filteredBlogs.push(blog);
-        }
-    })
-    latestPosts = filteredBlogs;
-}
 
-export default function WritingsPage() {
+export default function CategoriesPage({ params }: {params: {slug: string}}) {
+    let filteredBlogs: any = [];
+  
+    allBlogs.map((blog: any) => {
+        
+      if (blog.categories.includes(params.slug)) {
+        console.log(blog.categories[0]);
+        filteredBlogs.push(blog);
+        console.log(filteredBlogs)
+      }else if (params.slug == "all") {
+        filteredBlogs.push(blog);
+      }
+    });
   return (
-    console.log(allBlogs),
     (
       <div className="text-left">
         <MainHeader />
         <div className="md:w-[60vw] my-24 md:my-48 lg:my-0 mx-10 md:mx-auto aboutme-container">
-          <h1
-            className={`${airbeat.className} text-blue-white text-5xl font-bold`}
-          >
-            Writings
-          </h1>
-          <p className={`mt-6 ${fira_code.className} text-xl`}>
-            I like to pen down my insights, experiences, and thoughts about 
-            everything that I learn. Some of it, I feel, could be useful to
-            others as well. Hence, I share them here.
-          </p>
-
-         <Categories/>
+         
+          <Categories></Categories>
 
           
 
@@ -76,10 +67,10 @@ export default function WritingsPage() {
           <h3
             className={`${airbeat.className} text-blue-white text-[2em] font-bold`}
           >
-            Recent Posts
+            Posts Tagged "{params.slug}"
           </h3>
             <ul className="mt-12 px-14  ">
-              {latestPosts.map((blog:any) => (
+              {filteredBlogs.map((blog:any) => (
                 <li className="pl-6 border-y-[1px] py-6" key={blog._id}>
                   
                   <a

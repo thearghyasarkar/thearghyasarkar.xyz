@@ -7,12 +7,14 @@ import { RiHome5Fill } from "react-icons/ri";
 const airbeat = Orbitron({
   weight: '800',
   subsets: ['latin'],
+  display: 'swap', 
+  adjustFontFallback: false
 }) 
 
 const MainHeader = () => {
   return (
     <div>
-      <header className=" h-30 bg-light-black lg:h-60">
+      <header className=" h-30 lg:h-60">
         <nav
           className="desktop-header md:flex bg-fade-black content-center  w-full top-0 hidden my-auto items-center justify-center space-x-8 lg:space-x-20 p-24 lg:px-8"
           aria-label="Landing"

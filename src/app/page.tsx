@@ -5,10 +5,12 @@ import "@/styles/home.css"
 const fira_mono = Fira_Mono({
   weight: '400',
   subsets: ['latin'],
+  display: 'swap', adjustFontFallback: false
 })
 const airbeat = Orbitron({
   weight: '800',
-  subsets: ['latin'],
+  subsets: ['latin'],display: 'swap', adjustFontFallback: false
+
 }) 
 export default function Page() {
   return (
