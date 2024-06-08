@@ -16,15 +16,6 @@ const fira_code = Fira_Code({
 
 let latestPosts = sortBlogs(allBlogs);
 
-export const handleCategory = (category: string) => {
-    let filteredBlogs: any = []
-    allBlogs.map((blog:any) => {
-        if(blog.categories.includes(category)){
-            filteredBlogs.push(blog);
-        }
-    })
-    latestPosts = filteredBlogs;
-}
 
 export default function WritingsPage() {
   return (
