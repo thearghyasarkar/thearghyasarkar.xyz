@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-// Font files can be colocated inside of `pages`
 
 
 export const metadata = {

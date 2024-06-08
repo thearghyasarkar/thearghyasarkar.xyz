@@ -3,21 +3,12 @@ import { formatDate } from "@/functions";
 import MainHeader from "@/components/MainHeader";
 import {Categories} from "@/components/Categories"
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { Fira_Code, Orbitron } from "next/font/google";
-
-const airbeat = Orbitron({
-  weight: "800",
-  subsets: ["latin"],
-});
-const fira_code = Fira_Code({
-  weight: "400",
-  subsets: ["latin"],
-});
-
+import { orbitron, fira_code } from "@/components/Fonts";
 
 
 export default function CategoriesPage({ params }: {params: {slug: string}}) {
     let filteredBlogs: any = [];
+    let blogsLabel: string="";
   
     allBlogs.map((blog: any) => {
         
@@ -25,8 +16,10 @@ export default function CategoriesPage({ params }: {params: {slug: string}}) {
         console.log(blog.categories[0]);
         filteredBlogs.push(blog);
         console.log(filteredBlogs)
+        blogsLabel = "Posts tagged "+blog.categories[0];
       }else if (params.slug == "all") {
         filteredBlogs.push(blog);
+        blogsLabel = "All Posts";
       }
     });
   return (
@@ -39,7 +32,7 @@ export default function CategoriesPage({ params }: {params: {slug: string}}) {
 
           
 
-<button id="dropdownButton" data-dropdown-toggle="dropdown" className={`${airbeat.className} hover:text-black mx-6 mt-12 md:hidden mobile-categories hover:bg-blue-white bg-light-black text-blue-white border-2 text-lg px-5 py-2.5 text-center inline-flex items-center `} type="button">CATEGORIES<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<button id="dropdownButton" data-dropdown-toggle="dropdown" className={`${orbitron.className} hover:text-black mx-6 mt-12 md:hidden mobile-categories hover:bg-blue-white bg-light-black text-blue-white border-2 text-lg px-5 py-2.5 text-center inline-flex items-center `} type="button">CATEGORIES<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
 </svg>
 </button>
@@ -65,9 +58,11 @@ export default function CategoriesPage({ params }: {params: {slug: string}}) {
           
           <div className="my-14 posts">
           <h3
-            className={`${airbeat.className} text-blue-white text-[2em] font-bold`}
+            className={`${orbitron.className} text-blue-white text-[2em] font-bold`}
           >
-            Posts Tagged "{params.slug}"
+            
+          {blogsLabel}
+        
           </h3>
             <ul className="mt-12 px-14  ">
               {filteredBlogs.map((blog:any) => (
