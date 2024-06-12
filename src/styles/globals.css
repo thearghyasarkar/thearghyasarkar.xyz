@@ -4,14 +4,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: #EEFFED;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: #EEFFED;
     --background-start-rgb: 11, 11, 11;
     --background-end-rgb: 11, 11, 11;
   }
@@ -27,7 +27,7 @@ body {
   background-position: center;
   
 
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-rgb);
 
 }
 @layer utilities {

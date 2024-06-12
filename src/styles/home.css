@@ -8,6 +8,6 @@ body {
     height: 100vh;
     
   
-    color: rgb(var(--foreground-rgb));
+    color: var(--foreground-rgb);
   
   }

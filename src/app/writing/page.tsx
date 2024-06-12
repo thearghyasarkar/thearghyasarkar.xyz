@@ -4,6 +4,7 @@ import MainHeader from "@/components/MainHeader";
 import {Categories} from "@/components/Categories"
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { orbitron, fira_code } from "@/components/Fonts";
+import BlogMeta from "@/components/BlogMeta";
 
 
 let latestPosts = sortBlogs(allBlogs);
@@ -28,8 +29,6 @@ export default function WritingsPage() {
           </p>
 
          <Categories/>
-
-
           
           <div className="my-6 md:my-14 posts">
           <h3
@@ -39,21 +38,7 @@ export default function WritingsPage() {
           </h3>
             <ul className="mt-12 md:px-14 ">
               {latestPosts.map((blog:any) => (
-                <li className="pl-6 border-y-[1px] py-6" key={blog._id}>
-                  
-                  <a
-                    href={`${blog.url_path}`}
-                    className={`text-xl md:text-2xl block hover:underline ${fira_code.className}`}
-                  >
-                    {blog.title}
-                  </a>
-                  <p className={`${fira_code.className} text-gray-400 inline pt-4 text-sm md:text-lg`}>
-                    {blog.description} 
-                </p>
-                <br />
-                <br />
-                <p className={`text-xs ${fira_code.className} text-right text-gray-500`}>Published At: {formatDate(blog.publishedAt)}</p>
-                </li>
+                BlogMeta({blog: blog, isPublished: blog.isPublished})
               ))}
             </ul>
           </div>

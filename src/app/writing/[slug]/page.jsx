@@ -3,8 +3,7 @@ import { orbitron, fira_code } from "@/components/Fonts";
 import { allBlogs } from "../../../../.contentlayer/generated/index.mjs"
 import MainHeader from "@/components/MainHeader"
 import RenderMdx from "@/components/renderMdx"
-import { useMDXComponent } from "next-contentlayer/hooks"
-import { render } from "react-dom"
+import Toc from "@/components/TOC"
 
 
 export default function BlogPage({ params }){
@@ -20,7 +19,7 @@ export default function BlogPage({ params }){
                     <RenderMdx  blog={post}></RenderMdx> 
                     <div className="hidden md:inline toc mx-4 my-4">
                         <h2 className="text-xl mb-6">Table of Contents</h2>
-                        work in progress
+                        <Toc/>
                     </div>
                     </div>
             </div>
